@@ -1,0 +1,539 @@
+{
+  "kf": {
+    "23": [
+      {
+        "startTime": "1900",
+        "endTime": "1949",
+        "artist": "KILL SCRIPT"
+      },
+      {
+        "startTime": "1950",
+        "endTime": "2049",
+        "artist": "ELEPHANTE"
+      },
+      {
+        "startTime": "2050",
+        "endTime": "2149",
+        "artist": "JASON ROSS"
+      },
+      {
+        "startTime": "2150",
+        "endTime": "2155",
+        "artist": "OPENING CEREMONY"
+      },
+      {
+        "startTime": "2156",
+        "endTime": "2255",
+        "artist": "ANDREW RAYEL"
+      },
+      {
+        "startTime": "2256",
+        "endTime": "2258",
+        "artist": "CALM AFTER THE STORM"
+      },
+      {
+        "startTime": "2259",
+        "endTime": "2359",
+        "artist": "ALAN WALKER"
+      }
+    ],
+    "24": [
+      {
+        "startTime": "0000",
+        "endTime": "0003",
+        "artist": "ALAN WALKER"
+      },
+      {
+        "startTime": "0004",
+        "endTime": "0006",
+        "artist": "YOUR INNER GROWTH"
+      },
+      {
+        "startTime": "0007",
+        "endTime": "0131",
+        "artist": "TIESTO"
+      },
+      {
+        "startTime": "0132",
+        "endTime": "0136",
+        "artist": "25Y CELEBRATION SHOW"
+      },
+      {
+        "startTime": "0137",
+        "endTime": "0143",
+        "artist": "MAIN FIREWORKS"
+      },
+      {
+        "startTime": "0144",
+        "endTime": "0307",
+        "artist": "DJ SNAKE"
+      },
+      {
+        "startTime": "0308",
+        "endTime": "0310",
+        "artist": "FLOW OF LIFE"
+      },
+      {
+        "startTime": "0311",
+        "endTime": "0415",
+        "artist": "KSHMR"
+      },
+      {
+        "startTime": "0416",
+        "endTime": "0418",
+        "artist": "ACRYLIC RAINBOW"
+      },
+      {
+        "startTime": "0419",
+        "endTime": "0530",
+        "artist": "VINTAGE CULTURE"
+      },
+      {
+        "startTime": "1900",
+        "endTime": "1956",
+        "artist": "ARTY"
+      },
+      {
+        "startTime": "1957",
+        "endTime": "2056",
+        "artist": "LOST KINGS"
+      },
+      {
+        "startTime": "2057",
+        "endTime": "2156",
+        "artist": "HABSTRAKT"
+      },
+      {
+        "startTime": "2157",
+        "endTime": "2202",
+        "artist": "OPENING CEREMONY"
+      },
+      {
+        "startTime": "2203",
+        "endTime": "2302",
+        "artist": "PURPLE DISCO MACHINE"
+      },
+      {
+        "startTime": "2303",
+        "endTime": "2305",
+        "artist": "CALM AFTER THE STORM"
+      },
+      {
+        "startTime": "2306",
+        "endTime": "2359",
+        "artist": "3LAU"
+      }
+    ],
+    "25": [
+      {
+        "startTime": "0000",
+        "endTime": "0005",
+        "artist": "3LAU"
+      },
+      {
+        "startTime": "0006",
+        "endTime": "0008",
+        "artist": "YOUR INNER GROWTH"
+      },
+      {
+        "startTime": "0009",
+        "endTime": "0120",
+        "artist": "KASKADE"
+      },
+      {
+        "startTime": "0121",
+        "endTime": "0125",
+        "artist": "25Y CELEBRATION SHOW"
+      },
+      {
+        "startTime": "0126",
+        "endTime": "0132",
+        "artist": "MAIN FIREWORKS"
+      },
+      {
+        "startTime": "0133",
+        "endTime": "0259",
+        "artist": "KYGO"
+      },
+      {
+        "startTime": "0300",
+        "endTime": "0302",
+        "artist": "THE FLOW OF LIFE"
+      },
+      {
+        "startTime": "0303",
+        "endTime": "0414",
+        "artist": "AFROJACK B2B R3HAB"
+      },
+      {
+        "startTime": "0415",
+        "endTime": "0417",
+        "artist": "ACRYLIC RAINBOW"
+      },
+      {
+        "startTime": "0418",
+        "endTime": "0528",
+        "artist": "SLANDER B2B SAID THE SKY"
+      },
+      {
+        "startTime": "0529",
+        "endTime": "0530",
+        "artist": "CLOSING CEREMONY"
+      }
+    ]
+  },
+  "cg": {
+    "23": [
+      {
+        "startTime": "1900",
+        "endTime": "1950",
+        "artist": "KLOUD"
+      },
+      {
+        "startTime": "1951",
+        "endTime": "2045",
+        "artist": "ARMNHMR"
+      },
+      {
+        "startTime": "2046",
+        "endTime": "2145",
+        "artist": "BENNY BENASSI"
+      },
+      {
+        "startTime": "2146",
+        "endTime": "2245",
+        "artist": "OLIVER HELDENS"
+      },
+      {
+        "startTime": "2246",
+        "endTime": "2359",
+        "artist": "SLANDER"
+      }
+    ],
+    "24": [
+      {
+        "startTime": "0000",
+        "endTime": "0130",
+        "artist": "MARTIN GARRIX"
+      },
+      {
+        "startTime": "0131",
+        "endTime": "0245",
+        "artist": "DEADMAU5"
+      },
+      {
+        "startTime": "0246",
+        "endTime": "0345",
+        "artist": "JAUZ"
+      },
+      {
+        "startTime": "0346",
+        "endTime": "0440",
+        "artist": "1788-L"
+      },
+      {
+        "startTime": "0441",
+        "endTime": "0530",
+        "artist": "BLANKE"
+      },
+      {
+        "startTime": "1900",
+        "endTime": "2015",
+        "artist": "THROTTLE"
+      },
+      {
+        "startTime": "2016",
+        "endTime": "2130",
+        "artist": "LE YOUTH"
+      },
+      {
+        "startTime": "2130",
+        "endTime": "2245",
+        "artist": "SOLARDO"
+      },
+      {
+        "startTime": "2246",
+        "endTime": "2359",
+        "artist": "LANE 8"
+      }
+    ],
+    "25": [
+      {
+        "startTime": "0000",
+        "endTime": "0130",
+        "artist": "ERIC PRYDZ"
+      },
+      {
+        "startTime": "0131",
+        "endTime": "0230",
+        "artist": "REZZ"
+      },
+      {
+        "startTime": "0231",
+        "endTime": "0330",
+        "artist": "MALAA"
+      },
+      {
+        "startTime": "0331",
+        "endTime": "0430",
+        "artist": "SNAKEHIPS"
+      },
+      {
+        "startTime": "0431",
+        "endTime": "0530",
+        "artist": "BORGORE"
+      }
+    ]
+  },
+  "cm": {
+    "23": [
+      {
+        "startTime": "1700",
+        "endTime": "1745",
+        "artist": "SIDEPIECE"
+      },
+      {
+        "startTime": "1746",
+        "endTime": "1900",
+        "artist": "DIPLO B2B LEE FOSS"
+      },
+      {
+        "startTime": "1900",
+        "endTime": "2000",
+        "artist": "SAGE ARMSTRONG"
+      },
+      {
+        "startTime": "2001",
+        "endTime": "2100",
+        "artist": "KAIVON"
+      },
+      {
+        "startTime": "2101",
+        "endTime": "2200",
+        "artist": "PHANTOMS"
+      },
+      {
+        "startTime": "2201",
+        "endTime": "2300",
+        "artist": "AC SLATER"
+      },
+      {
+        "startTime": "2301",
+        "endTime": "2359",
+        "artist": "DIPLO"
+      }
+    ],
+    "24": [
+      {
+        "startTime": "0000",
+        "endTime": "0110",
+        "artist": "GRYFFIN"
+      },
+      {
+        "startTime": "0125",
+        "endTime": "0235",
+        "artist": "LOUIS THE CHILD"
+      },
+      {
+        "startTime": "0240",
+        "endTime": "0340",
+        "artist": "WHETHAN"
+      },
+      {
+        "startTime": "0341",
+        "endTime": "0435",
+        "artist": "DABIN"
+      },
+      {
+        "startTime": "0436",
+        "endTime": "0530",
+        "artist": "GAMMER B2B K?D"
+      },
+      {
+        "startTime": "1700",
+        "endTime": "1730",
+        "artist": "BLOSSOM"
+      },
+      {
+        "startTime": "1731",
+        "endTime": "1900",
+        "artist": "Z-TRIP"
+      },
+      {
+        "startTime": "1901",
+        "endTime": "2000",
+        "artist": "WILLIAM BLACK"
+      },
+      {
+        "startTime": "2001",
+        "endTime": "2100",
+        "artist": "VNSSA"
+      },
+      {
+        "startTime": "2101",
+        "endTime": "2200",
+        "artist": "WAX MOTIF"
+      },
+      {
+        "startTime": "2201",
+        "endTime": "2315",
+        "artist": "WALKER & ROYCE"
+      },
+      {
+        "startTime": "2316",
+        "endTime": "2359",
+        "artist": "TOKIMONSTA"
+      }
+    ],
+    "25": [
+      {
+        "startTime": "0000",
+        "endTime": "0030",
+        "artist": "TOKIMONSTA"
+      },
+      {
+        "startTime": "0031",
+        "endTime": "0130",
+        "artist": "DUKE DUMONT"
+      },
+      {
+        "startTime": "0131",
+        "endTime": "0245",
+        "artist": "ZEDD"
+      },
+      {
+        "startTime": "0246",
+        "endTime": "0345",
+        "artist": "TROYBOI"
+      },
+      {
+        "startTime": "0346",
+        "endTime": "0440",
+        "artist": "KNIFE PARTY"
+      },
+      {
+        "startTime": "0441",
+        "endTime": "0530",
+        "artist": "12TH PLANET B2B SAYMYNAME"
+      }
+    ]
+  },
+  "bp": {
+    "23": [
+      {
+        "startTime": "1900",
+        "endTime": "2030",
+        "artist": "FALLEN B2B RICHTER"
+      },
+      {
+        "startTime": "2031",
+        "endTime": "2130",
+        "artist": "DILLINJA"
+      },
+      {
+        "startTime": "2131",
+        "endTime": "2230",
+        "artist": "DIESEL"
+      },
+      {
+        "startTime": "2231",
+        "endTime": "2330",
+        "artist": "LUCII"
+      },
+      {
+        "startTime": "2331",
+        "endTime": "2359",
+        "artist": "WOOLI"
+      }
+    ],
+    "24": [
+      {
+        "startTime": "0000",
+        "endTime": "0030",
+        "artist": "WOOLI"
+      },
+      {
+        "startTime": "0031",
+        "endTime": "0130",
+        "artist": "SVDDEN DEATH"
+      },
+      {
+        "startTime": "0131",
+        "endTime": "0230",
+        "artist": "EXCISION"
+      },
+      {
+        "startTime": "0231",
+        "endTime": "0330",
+        "artist": "GANJA WHITE NIGHT"
+      },
+      {
+        "startTime": "0331",
+        "endTime": "0430",
+        "artist": "PENDULUM TRINITY"
+      },
+      {
+        "startTime": "0431",
+        "endTime": "0530",
+        "artist": "12TH PLANET"
+      },
+      {
+        "startTime": "1900",
+        "endTime": "2030",
+        "artist": "FURY + MC DINO"
+      },
+      {
+        "startTime": "2031",
+        "endTime": "2130",
+        "artist": "MADUCK"
+      },
+      {
+        "startTime": "2131",
+        "endTime": "2230",
+        "artist": "JOYRYDE"
+      },
+      {
+        "startTime": "2231",
+        "endTime": "2330",
+        "artist": "MARAUDA"
+      },
+      {
+        "startTime": "2331",
+        "endTime": "2359",
+        "artist": "HEROBUST B2B SPAG HEDDY"
+      }
+    ],
+    "25":[
+      {
+        "startTime": "0000",
+        "endTime": "0030",
+        "artist": "HEROBUST B2B SPAG HEDDY"
+      },
+      {
+        "startTime": "0031",
+        "endTime": "0130",
+        "artist": "SUBTRONICS"
+      },
+      {
+        "startTime": "0131",
+        "endTime": "0230",
+        "artist": "LIQUID STRANGER"
+      },
+      {
+        "startTime": "0231",
+        "endTime": "0330",
+        "artist": "ZOMBOY"
+      },
+      {
+        "startTime": "0331",
+        "endTime": "0430",
+        "artist": "DIMENSION"
+      },
+      {
+        "startTime": "0431",
+        "endTime": "0530",
+        "artist": "MODESTEP"
+      }
+    ]
+  }
+}
