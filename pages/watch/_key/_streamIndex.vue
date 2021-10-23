@@ -18,8 +18,10 @@ export default defineComponent({
     const route = useRoute()
 
     const streamKey = route.value.params.key
+    const streamIndex = route.value.params.streamIndex
+
     const streamInfo = streams.filter(e => e.key === streamKey)[0]
-    const streamLink = streamInfo.streams[0]
+    const streamLink = streamInfo.streams[streamIndex]
 
     return {
       streamKey,

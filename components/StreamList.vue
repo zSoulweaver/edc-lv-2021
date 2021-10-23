@@ -12,17 +12,23 @@
         <h1 class="streamList__name">
           {{ stream.displayName }}
         </h1>
-        <p class="streamList__currentArtist">
+        <p
+          v-if="schedule[stream.key] !== undefined"
+          class="streamList__currentArtist"
+        >
           Currently playing: <span>{{ scheduleTimes[stream.key] && scheduleTimes[stream.key].artist || 'Unknown' }}</span>
         </p>
-        <div>
+        <div class="streamList__actions">
           <nuxt-link
+            v-for="(streamLink, index) in stream.streams"
+            :key="streamLink"
             class="streamList__button"
-            :to="`/watch/${stream.key}`"
+            :to="`/watch/${stream.key}/${index}`"
           >
             Watch
           </nuxt-link>
           <nuxt-link
+            v-if="schedule[stream.key] !== undefined"
             class="streamList__button"
             :to="`/schedule/${stream.key}`"
           >
@@ -98,6 +104,7 @@ export default defineComponent({
     }
 
     return {
+      schedule,
       streams,
       scheduleTimes
     }
@@ -137,17 +144,28 @@ export default defineComponent({
     margin-bottom: 1rem;
   }
 
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__button {
-    display: inline-block;
     border-radius: 0.25rem;
     background: var(--color-button);
     color: #fff;
     text-decoration: none;
     padding: 0.75rem 2rem;
     font-weight: 600;
+    margin-top: 0.5rem;
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
   }
 
   &__currentArtist {
+    margin-bottom: 0.5rem;
+
     span {
       font-weight: 600;
     }

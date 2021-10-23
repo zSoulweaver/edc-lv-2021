@@ -1,5 +1,5 @@
 {
-  "kf": {
+  "kineticfield": {
     "23": [
       {
         "startTime": "1900",
@@ -182,7 +182,7 @@
       }
     ]
   },
-  "cg": {
+  "circuitgrounds": {
     "23": [
       {
         "startTime": "1900",
@@ -285,7 +285,7 @@
       }
     ]
   },
-  "cm": {
+  "cosmicmeadow": {
     "23": [
       {
         "startTime": "1700",
@@ -418,7 +418,7 @@
       }
     ]
   },
-  "bp": {
+  "basspod": {
     "23": [
       {
         "startTime": "1900",
