@@ -18,7 +18,7 @@ export default defineComponent({
       if (isDev) {
         return 'https://www.twitch.tv/embed/insomniac/chat?darkpopout&parent=localhost'
       } else {
-        return 'https://www.twitch.tv/embed/insomniac/chat?darkpopout&parent=localhost'
+        return 'https://www.twitch.tv/embed/insomniac/chat?darkpopout&parent=zsoulweaver.github.io'
       }
     })
 
