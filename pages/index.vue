@@ -1,7 +1,11 @@
 <template>
-  <p>initial</p>
+  <div class="index">
+    <StreamList />
+  </div>
 </template>
 
-<script>
-export default {}
-</script>
+<style lang="scss" scoped>
+.index {
+  padding: 2rem;
+}
+</style>

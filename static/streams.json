@@ -1,0 +1,34 @@
+[
+  {
+    "key": "cm",
+    "displayName": "cosmicMEADOW",
+    "streams": [
+      "https://www.youtube.com/embed/1JXa7iYnyi0?&autoplay=1"
+    ],
+    "thumbnail": "https://i.ytimg.com/vi/1JXa7iYnyi0/hqdefault_live.jpg"
+  },
+  {
+    "key": "cg",
+    "displayName": "circuitGROUNDS",
+    "streams": [
+      "https://www.youtube.com/embed/slYmVzlJuyc?&autoplay=1"
+    ],
+    "thumbnail": "https://i.ytimg.com/vi/slYmVzlJuyc/hqdefault_live.jpg"
+  },
+  {
+    "key": "kf",
+    "displayName": "kineticFIELD",
+    "streams": [
+      "https://www.youtube.com/embed/xyzMGR8OFFE?&autoplay=1"
+    ],
+    "thumbnail": "https://i.ytimg.com/vi/xyzMGR8OFFE/hqdefault_live.jpg"
+  },
+  {
+    "key": "bp",
+    "displayName": "bassPOD",
+    "streams": [
+      "https://www.youtube.com/embed/aHFc7ARpDFY?&autoplay=1"
+    ],
+    "thumbnail": "https://i.ytimg.com/vi/aHFc7ARpDFY/hqdefault_live.jpg"
+  }
+]

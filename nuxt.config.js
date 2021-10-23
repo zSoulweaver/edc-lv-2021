@@ -2,9 +2,13 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  router: {
+    base: '/edc-lv-2021/'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'edc-lv-2021',
+    title: 'EDC Las Vegas 2021',
     htmlAttrs: {
       lang: 'en'
     },
@@ -21,6 +25,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/normalize.css',
+    '~/assets/css/base.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -35,7 +41,8 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/composition-api/module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
