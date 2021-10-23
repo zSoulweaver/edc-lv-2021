@@ -31,6 +31,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .chat {
+  flex: 1;
   width: 24rem;
 
   iframe {

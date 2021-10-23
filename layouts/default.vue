@@ -1,11 +1,11 @@
 <template>
   <div class="layout">
-    <Header />
-    <div class="layout__content-container">
+    <div class="layout__sidebar">
+      <Header />
       <Chat />
-      <div class="layout__content">
-        <Nuxt />
-      </div>
+    </div>
+    <div class="layout__content">
+      <Nuxt />
     </div>
   </div>
 </template>
@@ -13,16 +13,15 @@
 <style lang="scss" scoped>
 .layout {
   display: flex;
-  flex-direction: column;
   height: 100vh;
   width: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
+  background: var(--color-background);
 
-  &__content-container {
+  &__sidebar {
     display: flex;
-    flex: 1;
-    background: var(--color-background);
+    flex-direction: column;
   }
 
   &__content {

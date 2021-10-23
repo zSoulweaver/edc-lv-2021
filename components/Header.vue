@@ -1,31 +1,43 @@
 <template>
   <div class="header">
-    <div class="header__left">
-      <nuxt-link
-        class="header__item"
-        to="/"
-      >
-        Home
-      </nuxt-link>
-    </div>
-    <!-- <div class="header__right">
-      <div class="header__item">
-        <p>Hide Chat</p>
-      </div>
-      <div class="header__item">
-        <p>Swap Chat</p>
-      </div>
-    </div> -->
+    <nuxt-link
+      v-if="!isHome"
+      class="header__item"
+      to="/"
+    >
+      <ArrowLeft />
+    </nuxt-link>
   </div>
 </template>
 
+<script>
+import { computed, defineComponent, useRoute } from '@nuxtjs/composition-api'
+import ArrowLeft from 'vue-material-design-icons/ArrowLeft.vue'
+
+export default defineComponent({
+  components: {
+    ArrowLeft
+  },
+
+  setup () {
+    const route = useRoute()
+
+    const isHome = computed(() => route.value.name === 'index')
+
+    return {
+      isHome
+    }
+  }
+})
+</script>
+
 <style lang="scss" scoped>
 .header {
-  height: 4rem;
-  padding: 0 3rem;
+  height: 3.5rem;
   background: var(--color-background-alt);
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
 
   &__left,
   &__right {
@@ -33,7 +45,9 @@
   }
 
   &__item {
-    height: 100%;
+    height: 2.5rem;
+    background: #444;
+    border-radius: 0.5rem;
     padding: 0 1rem;
     display: flex;
     align-items: center;
