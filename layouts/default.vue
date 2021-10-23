@@ -27,7 +27,7 @@
   &__content {
     height: 100%;
     flex: 1;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }
 </style>

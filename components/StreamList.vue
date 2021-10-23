@@ -12,25 +12,94 @@
         <h1 class="streamList__name">
           {{ stream.displayName }}
         </h1>
-        <nuxt-link
-          class="streamList__watchButton"
-          :to="`/watch/${stream.key}`"
-        >
-          Watch
-        </nuxt-link>
+        <p class="streamList__currentArtist">
+          Currently playing: <span>{{ scheduleTimes[stream.key] && scheduleTimes[stream.key].artist || 'Unknown' }}</span>
+        </p>
+        <div>
+          <nuxt-link
+            class="streamList__button"
+            :to="`/watch/${stream.key}`"
+          >
+            Watch
+          </nuxt-link>
+          <nuxt-link
+            class="streamList__button"
+            :to="`/schedule/${stream.key}`"
+          >
+            Schedule
+          </nuxt-link>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, onBeforeUnmount, onMounted, reactive } from '@nuxtjs/composition-api'
+import { utcToZonedTime } from 'date-fns-tz'
+import { format } from 'date-fns'
 import streams from '~/static/streams.json'
+import schedule from '~/static/schedule.json'
 
 export default defineComponent({
   setup () {
+    const scheduleTimes = reactive({
+      cm: null,
+      cg: null,
+      kf: null,
+      bp: null
+    })
+
+    let refreshInterval
+
+    onMounted(() => {
+      getCurrentSchedule()
+      refreshInterval = setInterval(getCurrentSchedule, 60000)
+    })
+
+    onBeforeUnmount(() => {
+      clearInterval(refreshInterval)
+    })
+
+    function getCurrentSchedule () {
+      const stages = Object.keys(schedule)
+      stages.forEach((stage) => {
+        Object.assign(scheduleTimes, {
+          [stage]: getCurrentScheduleForStage(stage)
+        })
+      })
+    }
+
+    function getCurrentScheduleForStage (stage) {
+      const date = utcToZonedTime(Date.now(), 'America/Los_Angeles')
+      const formattedTime = format(date, 'HHmm')
+      const hour = formattedTime.substring(0, 2)
+      const minute = formattedTime.substring(2, 4)
+
+      const events = schedule[stage][date.getDate()]
+      if (events === undefined || !events[date.getDate()]) {
+        return
+      }
+      return events.find((event) => {
+        if (hour === event.startTime.substring(0, 2)) {
+          if (parseInt(minute) > parseInt(event.startTime.substring(2, 4))) {
+            return event
+          }
+        }
+
+        if (hour === event.endTime.substring(0, 2)) {
+          if (parseInt(minute) < parseInt(event.endTime.substring(2, 4))) {
+            return event
+          }
+        }
+
+        return null
+      })
+    }
+
     return {
-      streams
+      streams,
+      scheduleTimes
     }
   }
 })
@@ -68,13 +137,20 @@ export default defineComponent({
     margin-bottom: 1rem;
   }
 
-  &__watchButton {
+  &__button {
     display: inline-block;
     border-radius: 0.25rem;
     background: var(--color-button);
     color: #fff;
     text-decoration: none;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+  }
+
+  &__currentArtist {
+    span {
+      font-weight: 600;
+    }
   }
 }
 </style>
