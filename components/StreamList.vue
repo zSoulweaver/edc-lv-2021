@@ -51,7 +51,7 @@ export default defineComponent({
 
   &__image {
     width: 100%;
-    max-width: 15rem;
+    max-width: 10rem;
     border-radius: 0.5rem;
     overflow: hidden;
     margin-right: 1rem;

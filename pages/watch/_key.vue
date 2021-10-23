@@ -29,6 +29,12 @@ export default defineComponent({
 })
 </script>
 
+<style lang="scss">
+.layout__content {
+  overflow: hidden !important;
+}
+</style>
+
 <style lang="scss" scoped>
 .watch {
   height: 100%;
