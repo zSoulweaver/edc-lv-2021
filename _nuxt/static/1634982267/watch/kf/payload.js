@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/watch/kf", {data:[{}],fetch:{},mutations:void 0});
