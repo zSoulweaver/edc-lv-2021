@@ -10,7 +10,7 @@
         </h2> -->
         <div
           v-for="(event, index) in daySchedule"
-          :key="index"
+          :key="index + event.artist"
           class="schedule__event"
         >
           <p class="schedule__artist">
