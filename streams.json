@@ -1,34 +1,59 @@
 [
   {
-    "key": "cm",
-    "displayName": "cosmicMEADOW",
+    "key": "curated",
+    "displayName": "Curated Livestream",
     "streams": [
-      "https://www.youtube.com/embed/1JXa7iYnyi0?&autoplay=1"
+      "https://www.youtube.com/embed/2i54dkv0j0M?&autoplay=1",
+      "https://player.twitch.tv/?channel=insomniac&parent=localhost"
     ],
+    "thumbnail": "https://i.ytimg.com/vi/2i54dkv0j0M/hqdefault_live.jpg"
+  },
+  {
+    "key": "cosmicmeadow",
+    "displayName": "cosmicMEADOW",
+    "streams": [],
     "thumbnail": "https://i.ytimg.com/vi/1JXa7iYnyi0/hqdefault_live.jpg"
   },
   {
-    "key": "cg",
+    "key": "circuitgrounds",
     "displayName": "circuitGROUNDS",
-    "streams": [
-      "https://www.youtube.com/embed/slYmVzlJuyc?&autoplay=1"
-    ],
+    "streams": [],
     "thumbnail": "https://i.ytimg.com/vi/slYmVzlJuyc/hqdefault_live.jpg"
   },
   {
-    "key": "kf",
+    "key": "kineticfield",
     "displayName": "kineticFIELD",
-    "streams": [
-      "https://www.youtube.com/embed/xyzMGR8OFFE?&autoplay=1"
-    ],
+    "streams": [],
     "thumbnail": "https://i.ytimg.com/vi/xyzMGR8OFFE/hqdefault_live.jpg"
   },
   {
-    "key": "bp",
+    "key": "basspod",
     "displayName": "bassPOD",
-    "streams": [
-      "https://www.youtube.com/embed/aHFc7ARpDFY?&autoplay=1"
-    ],
+    "streams": [],
     "thumbnail": "https://i.ytimg.com/vi/aHFc7ARpDFY/hqdefault_live.jpg"
+  },
+  {
+    "key": "neongarden",
+    "displayName": "neonGARDEN",
+    "streams": [],
+    "thumbnail": "https://i.ytimg.com/vi/gyjQ4mnYx-g/hqdefault.jpg"
+  },
+  {
+    "key": "wasteland",
+    "displayName": "wasteLAND",
+    "streams": [],
+    "thumbnail": "https://i.ytimg.com/vi/7km46x1q11U/hqdefault.jpg"
+  },
+  {
+    "key": "quantumvalley",
+    "displayName": "quantumVALLEY",
+    "streams": [],
+    "thumbnail": "https://i.ytimg.com/vi/6tY027T96QU/hqdefault.jpg"
+  },
+  {
+    "key": "stereobloom",
+    "displayName": "stereoBLOOM",
+    "streams": [],
+    "thumbnail": "https://i.ytimg.com/vi/ZMgyVMnORvw/hqdefault.jpg"
   }
 ]

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/watch/curated/0", {data:[{}],fetch:{},mutations:void 0});

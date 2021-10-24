@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/schedule/kf", {data:[{}],fetch:{},mutations:void 0});

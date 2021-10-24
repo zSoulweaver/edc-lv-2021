@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/watch/bp", {data:[{}],fetch:{},mutations:void 0});
