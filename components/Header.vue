@@ -21,9 +21,8 @@
 </template>
 
 <script>
-import { computed, defineComponent, useRoute } from '@nuxtjs/composition-api'
+import { computed, defineComponent, useRoute, useStore } from '@nuxtjs/composition-api'
 import ArrowLeft from 'vue-material-design-icons/ArrowLeft.vue'
-import { useEvent } from '~/store/event'
 
 export default defineComponent({
   components: {
@@ -32,13 +31,13 @@ export default defineComponent({
 
   setup () {
     const route = useRoute()
-    const eventStore = useEvent()
+    const store = useStore()
 
     const streamKey = computed(() => route.value.params.key)
     const isHome = computed(() => route.value.name === 'index')
     const isStream = computed(() => route.value.name === 'watch-key-streamIndex')
 
-    const currentlyPlaying = computed(() => eventStore.currentlyPlaying)
+    const currentlyPlaying = computed(() => store.state.event.currentlyPlaying)
 
     return {
       isHome,

@@ -11,15 +11,14 @@
 </template>
 
 <script>
-import { defineComponent, onMounted, onBeforeUnmount } from '@nuxtjs/composition-api'
+import { defineComponent, onMounted, onBeforeUnmount, useStore } from '@nuxtjs/composition-api'
 import { utcToZonedTime } from 'date-fns-tz'
 import { parse, isWithinInterval } from 'date-fns'
-import { useEvent } from '~/store/event'
 import schedule from '~/static/schedule.json'
 
 export default defineComponent({
   setup () {
-    const eventStore = useEvent()
+    const store = useStore()
 
     let refreshInterval
 
@@ -35,7 +34,7 @@ export default defineComponent({
     function getCurrentSchedule () {
       const stages = Object.keys(schedule)
       stages.forEach((stage) => {
-        eventStore.setCurrentlyPlaying({
+        store.commit('event/setCurrentlyPlaying', {
           stage,
           data: getCurrentScheduleForStage(stage)
         })

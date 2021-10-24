@@ -11,15 +11,14 @@
 </template>
 
 <script>
-import { defineComponent, useMeta, useRoute } from '@nuxtjs/composition-api'
+import { defineComponent, useMeta, useRoute, useStore } from '@nuxtjs/composition-api'
 import streams from '~/static/streams.json'
-import { useEvent } from '~/store/event'
 
 export default defineComponent({
 
   setup () {
     const route = useRoute()
-    const eventStore = useEvent()
+    const store = useStore()
     const { title } = useMeta()
 
     const streamKey = route.value.params.key
@@ -28,11 +27,11 @@ export default defineComponent({
     const streamInfo = streams.filter(e => e.key === streamKey)[0]
     const streamLink = streamInfo.streams[streamIndex]
 
-    eventStore.$subscribe((_, state) => {
-      title.value = state.currentlyPlaying[streamKey]
+    store.subscribe((_, state) => {
+      title.value = state.event.currentlyPlaying[streamKey]
     })
 
-    title.value = eventStore.currentlyPlaying[streamKey] || streamInfo.displayName
+    title.value = store.state.event.currentlyPlaying[streamKey] || streamInfo.displayName
 
     return {
       streamKey,

@@ -41,16 +41,15 @@
 </template>
 
 <script>
-import { computed, defineComponent } from '@nuxtjs/composition-api'
+import { computed, defineComponent, useStore } from '@nuxtjs/composition-api'
 import streams from '~/static/streams.json'
 import schedule from '~/static/schedule.json'
-import { useEvent } from '~/store/event'
 
 export default defineComponent({
   setup () {
-    const eventStore = useEvent()
+    const store = useStore()
 
-    const currentlyPlaying = computed(() => eventStore.currentlyPlaying)
+    const currentlyPlaying = computed(() => store.state.event.currentlyPlaying)
 
     return {
       schedule,
