@@ -11,7 +11,9 @@
   {
     "key": "cosmicmeadow",
     "displayName": "cosmicMEADOW",
-    "streams": [],
+    "streams": [
+      "https://www.youtube.com/embed/jbIgWbhmoiE?&autoplay=1"
+    ],
     "thumbnail": "https://i.ytimg.com/vi/1JXa7iYnyi0/hqdefault_live.jpg"
   },
   {
