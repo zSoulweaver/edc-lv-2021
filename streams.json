@@ -35,8 +35,11 @@
   {
     "key": "basspod",
     "displayName": "bassPOD",
-    "streams": [],
-    "thumbnail": "https://i.ytimg.com/vi/2i54dkv0j0M/hqdefault_live.jpg"
+    "streams": [
+      "https://www.youtube.com/embed/qGycwZ2eNeI?&autoplay=1"
+
+    ],
+    "thumbnail": "https://i.ytimg.com/vi/qGycwZ2eNeI/hqdefault_live.jpg"
   },
   {
     "key": "neongarden",
