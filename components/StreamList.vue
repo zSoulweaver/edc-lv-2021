@@ -116,6 +116,7 @@ export default defineComponent({
 .streamList {
   &__stream {
     display: flex;
+    flex-wrap: wrap;
     padding: 1rem;
     border-radius: 0.2rem;
     background: var(--color-background-alt);
@@ -126,11 +127,15 @@ export default defineComponent({
   }
 
   &__image {
-    width: 100%;
-    max-width: 10rem;
+    width: 10rem;
+    min-width: 10rem;
     border-radius: 0.5rem;
     overflow: hidden;
     margin-right: 1rem;
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
 
     img {
       width: 100%;

@@ -103,6 +103,8 @@ export default defineComponent({
   display: flex;
   align-items: center;
   padding: 0 0.5rem;
+  z-index: 5;
+  border-top: 1px solid #393939;
 
   &__left,
   &__right {

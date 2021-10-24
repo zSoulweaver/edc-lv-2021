@@ -34,9 +34,18 @@ export default defineComponent({
   flex: 1;
   width: 24rem;
 
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
+
   iframe {
     width: 100%;
     height: 100%;
+
+    @media screen and (max-width: 800px) {
+      margin-top: -7.5rem;
+      height: calc(100% + 7.5rem);
+    }
   }
 }
 </style>

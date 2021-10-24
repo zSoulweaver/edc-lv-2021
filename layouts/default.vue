@@ -19,15 +19,26 @@
   color: #fff;
   background: var(--color-background);
 
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+
   &__sidebar {
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 800px) {
+      order: 2;
+      height: 20rem;
+    }
   }
 
   &__content {
     height: 100%;
     flex: 1;
     overflow-y: auto;
+    z-index: 10;
+    background: var(--color-background);
   }
 }
 </style>
