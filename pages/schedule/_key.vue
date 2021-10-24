@@ -5,19 +5,17 @@
       <template
         v-for="(daySchedule, day) in schedule[streamKey]"
       >
-        <!-- <h2 class="schedule__day">
-          {{ day }}th
-        </h2> -->
         <div
           v-for="(event, index) in daySchedule"
           :key="index + event.artist"
           class="schedule__event"
+          :class="{ 'schedule__event--current': isCurrent(event.startTime, event.endTime, day) }"
         >
           <p class="schedule__artist">
             {{ event.artist }}
           </p>
           <p class="schedule__time">
-            {{ getDay(event.startTime, day) }} {{ parseTime(event.startTime, day) }} - {{ parseTime(event.endTime, day) }}
+            {{ getDay(event.startTime, day) }} | {{ parseTime(event.startTime, day) }} - {{ parseTime(event.endTime, day) }}
           </p>
         </div>
       </template>
@@ -26,9 +24,8 @@
 </template>
 
 <script>
-import { defineComponent, useRoute } from '@nuxtjs/composition-api'
-// eslint-disable-next-line no-unused-vars
-import { format, parse } from 'date-fns'
+import { defineComponent, onMounted, useRoute } from '@nuxtjs/composition-api'
+import { format, parse, isWithinInterval } from 'date-fns'
 import streams from '~/static/streams.json'
 import schedule from '~/static/schedule.json'
 
@@ -38,6 +35,10 @@ export default defineComponent({
 
     const streamKey = route.value.params.key
     const streamInfo = streams.filter(e => e.key === streamKey)[0]
+
+    onMounted(() => {
+      document.getElementsByClassName('layout__content')[0].scrollTo(0, 0)
+    })
 
     function getDay (time, day) {
       const parsedTime = parse(`${time} ${day} 10 -0700`, 'HHmm dd LL XXXX', new Date())
@@ -49,13 +50,28 @@ export default defineComponent({
       return format(parsedTime, 'hh:mm b')
     }
 
+    function isCurrent (startTime, endTime, day) {
+      const parsedStartTime = parse(`${startTime} ${day} 10 -0700`, 'HHmm dd LL XXXX', new Date())
+      const parsedEndTime = parse(`${endTime} ${day} 10 -0700`, 'HHmm dd LL XXXX', new Date())
+
+      if (isWithinInterval(Date.now(), {
+        start: parsedStartTime,
+        end: parsedEndTime
+      })) {
+        return true
+      } else {
+        return false
+      }
+    }
+
     return {
       streams,
       schedule,
       streamKey,
       streamInfo,
       parseTime,
-      getDay
+      getDay,
+      isCurrent
     }
   }
 })
@@ -88,6 +104,10 @@ export default defineComponent({
     background: var(--color-background-alt);
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
+
+    &--current {
+      background: #2c5940;
+    }
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
