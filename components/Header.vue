@@ -15,17 +15,15 @@
       class="header__currentArtist"
     >
       Currently:
-      <span>{{ currentlyPlaying && currentlyPlaying.artist || 'Unknown' }}</span>
+      <span>{{ currentlyPlaying[streamKey] || 'Unknown' }}</span>
     </p>
   </div>
 </template>
 
 <script>
-import { computed, defineComponent, useRoute, onMounted, onBeforeUnmount, ref, watch } from '@nuxtjs/composition-api'
+import { computed, defineComponent, useRoute } from '@nuxtjs/composition-api'
 import ArrowLeft from 'vue-material-design-icons/ArrowLeft.vue'
-import { utcToZonedTime } from 'date-fns-tz'
-import { parse, isWithinInterval } from 'date-fns'
-import schedule from '~/static/schedule.json'
+import { useEvent } from '~/store/event'
 
 export default defineComponent({
   components: {
@@ -34,57 +32,13 @@ export default defineComponent({
 
   setup () {
     const route = useRoute()
+    const eventStore = useEvent()
 
     const streamKey = computed(() => route.value.params.key)
     const isHome = computed(() => route.value.name === 'index')
     const isStream = computed(() => route.value.name === 'watch-key-streamIndex')
 
-    const currentlyPlaying = ref(null)
-
-    let refreshInterval
-
-    onMounted(() => {
-      getCurrentlyPlaying()
-      refreshInterval = setInterval(getCurrentlyPlaying, 60000)
-    })
-
-    onBeforeUnmount(() => {
-      clearInterval(refreshInterval)
-    })
-
-    watch(() => streamKey.value, (newKey) => {
-      if (newKey) {
-        getCurrentlyPlaying()
-      }
-    })
-
-    function getCurrentlyPlaying () {
-      if (isStream.value) {
-        currentlyPlaying.value = getCurrentScheduleForStage(streamKey.value)
-      }
-    }
-
-    function getCurrentScheduleForStage (stage) {
-      const date = utcToZonedTime(Date.now(), 'America/Los_Angeles')
-      const events = schedule[stage]
-      if (events === undefined || events[date.getDate()] === undefined) {
-        return
-      }
-
-      return events[date.getDate()].find((event) => {
-        const parsedStartTime = parse(`${event.startTime} ${date.getDate()} 10 -0700`, 'HHmm dd LL XXXX', new Date())
-        const parsedEndTime = parse(`${event.endTime} ${date.getDate()} 10 -0700`, 'HHmm dd LL XXXX', new Date())
-
-        if (isWithinInterval(Date.now(), {
-          start: parsedStartTime,
-          end: parsedEndTime
-        })) {
-          return event
-        }
-
-        return null
-      })
-    }
+    const currentlyPlaying = computed(() => eventStore.currentlyPlaying)
 
     return {
       isHome,

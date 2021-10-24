@@ -1,5 +1,6 @@
 <template>
   <div class="watch">
+    <QuickStage />
     <iframe
       :src="streamLink"
       frameborder="0"
@@ -10,12 +11,16 @@
 </template>
 
 <script>
-import { defineComponent, useRoute } from '@nuxtjs/composition-api'
+import { defineComponent, useMeta, useRoute } from '@nuxtjs/composition-api'
 import streams from '~/static/streams.json'
+import { useEvent } from '~/store/event'
 
 export default defineComponent({
+
   setup () {
     const route = useRoute()
+    const eventStore = useEvent()
+    const { title } = useMeta()
 
     const streamKey = route.value.params.key
     const streamIndex = route.value.params.streamIndex
@@ -23,22 +28,36 @@ export default defineComponent({
     const streamInfo = streams.filter(e => e.key === streamKey)[0]
     const streamLink = streamInfo.streams[streamIndex]
 
+    eventStore.$subscribe((_, state) => {
+      title.value = state.currentlyPlaying[streamKey]
+    })
+
+    title.value = eventStore.currentlyPlaying[streamKey] || streamInfo.displayName
+
     return {
       streamKey,
       streamLink
     }
-  }
+  },
+  head: {}
 })
 </script>
 
 <style lang="scss" scoped>
 .watch {
+  position: relative;
   height: 100%;
   overflow: hidden;
 
+  &:hover {
+    ::v-deep .quickStage {
+      opacity: 1;
+    }
+  }
+
   iframe {
-    width: 100%;
     height: 100%;
+    width: 100%;
   }
 }
 </style>

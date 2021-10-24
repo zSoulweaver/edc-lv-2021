@@ -8,7 +8,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'EDC Las Vegas 2021',
+    titleTemplate: (chunk) => {
+      return chunk ? `${chunk} | EDC Las Vegas 2021` : 'EDC Las Vegas 2021'
+    },
     htmlAttrs: {
       lang: 'en'
     },
@@ -42,7 +44,8 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/composition-api/module'
+    '@nuxtjs/composition-api/module',
+    '@pinia/nuxt'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

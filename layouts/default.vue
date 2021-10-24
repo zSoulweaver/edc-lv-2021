@@ -10,6 +10,64 @@
   </div>
 </template>
 
+<script>
+import { defineComponent, onMounted, onBeforeUnmount } from '@nuxtjs/composition-api'
+import { utcToZonedTime } from 'date-fns-tz'
+import { parse, isWithinInterval } from 'date-fns'
+import { useEvent } from '~/store/event'
+import schedule from '~/static/schedule.json'
+
+export default defineComponent({
+  setup () {
+    const eventStore = useEvent()
+
+    let refreshInterval
+
+    onMounted(() => {
+      getCurrentSchedule()
+      refreshInterval = setInterval(getCurrentSchedule, 60000)
+    })
+
+    onBeforeUnmount(() => {
+      clearInterval(refreshInterval)
+    })
+
+    function getCurrentSchedule () {
+      const stages = Object.keys(schedule)
+      stages.forEach((stage) => {
+        eventStore.setCurrentlyPlaying({
+          stage,
+          data: getCurrentScheduleForStage(stage)
+        })
+      })
+    }
+
+    function getCurrentScheduleForStage (stage) {
+      const date = utcToZonedTime(Date.now(), 'America/Los_Angeles')
+
+      const events = schedule[stage]
+      if (events === undefined || events[date.getDate()] === undefined) {
+        return
+      }
+
+      return events[date.getDate()].find((event) => {
+        const parsedStartTime = parse(`${event.startTime} ${date.getDate()} 10 -0700`, 'HHmm dd LL XXXX', new Date())
+        const parsedEndTime = parse(`${event.endTime} ${date.getDate()} 10 -0700`, 'HHmm dd LL XXXX', new Date())
+
+        if (isWithinInterval(Date.now(), {
+          start: parsedStartTime,
+          end: parsedEndTime
+        })) {
+          return event
+        }
+
+        return null
+      })
+    }
+  }
+})
+</script>
+
 <style lang="scss" scoped>
 .layout {
   display: flex;

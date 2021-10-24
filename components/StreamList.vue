@@ -13,10 +13,10 @@
           {{ stream.displayName }}
         </h1>
         <p
-          v-if="schedule[stream.key] !== undefined"
+          v-if="currentlyPlaying[stream.key] !== undefined"
           class="streamList__currentArtist"
         >
-          Currently playing: <span>{{ scheduleTimes[stream.key] && scheduleTimes[stream.key].artist || 'Unknown' }}</span>
+          Currently playing: <span>{{ currentlyPlaying[stream.key] || 'Unknown' }}</span>
         </p>
         <div class="streamList__actions">
           <nuxt-link
@@ -41,72 +41,21 @@
 </template>
 
 <script>
-import { defineComponent, onBeforeUnmount, onMounted, reactive } from '@nuxtjs/composition-api'
-import { utcToZonedTime } from 'date-fns-tz'
-import { parse, isWithinInterval } from 'date-fns'
+import { computed, defineComponent } from '@nuxtjs/composition-api'
 import streams from '~/static/streams.json'
 import schedule from '~/static/schedule.json'
+import { useEvent } from '~/store/event'
 
 export default defineComponent({
   setup () {
-    const scheduleTimes = reactive({
-      cosmicmeadow: null,
-      circuitgrounds: null,
-      kineticfield: null,
-      basspod: null,
-      neongarden: null,
-      wasteland: null,
-      quantumvalley: null,
-      stereobloom: null
-    })
+    const eventStore = useEvent()
 
-    let refreshInterval
-
-    onMounted(() => {
-      getCurrentSchedule()
-      refreshInterval = setInterval(getCurrentSchedule, 60000)
-    })
-
-    onBeforeUnmount(() => {
-      clearInterval(refreshInterval)
-    })
-
-    function getCurrentSchedule () {
-      const stages = Object.keys(schedule)
-      stages.forEach((stage) => {
-        Object.assign(scheduleTimes, {
-          [stage]: getCurrentScheduleForStage(stage)
-        })
-      })
-    }
-
-    function getCurrentScheduleForStage (stage) {
-      const date = utcToZonedTime(Date.now(), 'America/Los_Angeles')
-
-      const events = schedule[stage]
-      if (events === undefined || events[date.getDate()] === undefined) {
-        return
-      }
-
-      return events[date.getDate()].find((event) => {
-        const parsedStartTime = parse(`${event.startTime} ${date.getDate()} 10 -0700`, 'HHmm dd LL XXXX', new Date())
-        const parsedEndTime = parse(`${event.endTime} ${date.getDate()} 10 -0700`, 'HHmm dd LL XXXX', new Date())
-
-        if (isWithinInterval(Date.now(), {
-          start: parsedStartTime,
-          end: parsedEndTime
-        })) {
-          return event
-        }
-
-        return null
-      })
-    }
+    const currentlyPlaying = computed(() => eventStore.currentlyPlaying)
 
     return {
       schedule,
       streams,
-      scheduleTimes
+      currentlyPlaying
     }
   }
 })
