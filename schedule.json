@@ -535,5 +535,422 @@
         "artist": "MODESTEP"
       }
     ]
+  },
+  "neongarden": {
+    "23": [
+      {
+        "startTime": "1900",
+        "endTime": "2030",
+        "artist": "ADIN"
+      },
+      {
+        "startTime": "2031",
+        "endTime": "2200",
+        "artist": "AVISION"
+      },
+      {
+        "startTime": "2201",
+        "endTime": "2330",
+        "artist": "ELI BROWN"
+      },
+      {
+        "startTime": "2330",
+        "endTime": "2359",
+        "artist": "ENRICO SANGIULIANO"
+      }
+    ],
+    "24": [
+      {
+        "startTime": "0000",
+        "endTime": "0100",
+        "artist": "ENRICO SANGIULIANO"
+      },
+      {
+        "startTime": "0101",
+        "endTime": "0230",
+        "artist": "MACEO PLEX"
+      },
+      {
+        "startTime": "0231",
+        "endTime": "0400",
+        "artist": "CHARLOTTE DE WITTE"
+      },
+      {
+        "startTime": "0401",
+        "endTime": "0530",
+        "artist": "REINIER ZONNEVELD LIVE"
+      },
+      {
+        "startTime": "1900",
+        "endTime": "2000",
+        "artist": "DECLAN JAMES"
+      },
+      {
+        "startTime": "2001",
+        "endTime": "2130",
+        "artist": "MATHAME"
+      },
+      {
+        "startTime": "2131",
+        "endTime": "2300",
+        "artist": "ARTBAT"
+      },
+      {
+        "startTime": "2301",
+        "endTime": "2359",
+        "artist": "BLACK COFFEE"
+      }
+    ],
+    "25":[
+      {
+        "startTime": "0000",
+        "endTime": "0030",
+        "artist": "BLACK COFFEE"
+      },
+      {
+        "startTime": "0031",
+        "endTime": "0200",
+        "artist": "NINA KRAVIZ"
+      },
+      {
+        "startTime": "0201",
+        "endTime": "0400",
+        "artist": "DUBFIRE B3B NICOLE MOUDABER B3B PACO OUSUNA"
+      },
+      {
+        "startTime": "0401",
+        "endTime": "0530",
+        "artist": "PATRICK TOPPING"
+      }
+    ]
+  },
+  "wasteland": {
+    "23": [
+      {
+        "startTime": "1900",
+        "endTime": "2030",
+        "artist": "ILLUMINIZE"
+      },
+      {
+        "startTime": "2031",
+        "endTime": "2130",
+        "artist": "SOREN"
+      },
+      {
+        "startTime": "2131",
+        "endTime": "2230",
+        "artist": "SHEI"
+      },
+      {
+        "startTime": "2231",
+        "endTime": "2330",
+        "artist": "SAYMYNAME"
+      },
+      {
+        "startTime": "2331",
+        "endTime": "2359",
+        "artist": "GAMMER HD"
+      }
+    ],
+    "24": [
+      {
+        "startTime": "0000",
+        "endTime": "0030",
+        "artist": "GAMMER HD"
+      },
+      {
+        "startTime": "0031",
+        "endTime": "0145",
+        "artist": "TONESHIFTERZ"
+      },
+      {
+        "startTime": "0146",
+        "endTime": "0230",
+        "artist": "GUNZ FOR HIRE"
+      },
+      {
+        "startTime": "0231",
+        "endTime": "0330",
+        "artist": "JUNKIE KID"
+      },
+      {
+        "startTime": "0331",
+        "endTime": "0430",
+        "artist": "ADARO"
+      },
+      {
+        "startTime": "0431",
+        "endTime": "0530",
+        "artist": "LIL TEXAS"
+      },
+      {
+        "startTime": "1900",
+        "endTime": "2000",
+        "artist": "WATER SPIRIT"
+      },
+      {
+        "startTime": "2001",
+        "endTime": "2100",
+        "artist": "AUDIOFREQ"
+      },
+      {
+        "startTime": "2101",
+        "endTime": "2200",
+        "artist": "DR PHUNK"
+      },
+      {
+        "startTime": "2201",
+        "endTime": "2300",
+        "artist": "DJ ISAAC"
+      },
+      {
+        "startTime": "2301",
+        "endTime": "2359",
+        "artist": "DA TWEEKAZ"
+      }
+    ],
+    "25":[
+      {
+        "startTime": "0000",
+        "endTime": "0100",
+        "artist": "NOISECONTROLLERS"
+      },
+      {
+        "startTime": "0101",
+        "endTime": "0200",
+        "artist": "SUB ZERO PROJECT"
+      },
+      {
+        "startTime": "0201",
+        "endTime": "0300",
+        "artist": "CODE BLACK"
+      },
+      {
+        "startTime": "0301",
+        "endTime": "0400",
+        "artist": "ROB GEE"
+      },
+      {
+        "startTime": "0401",
+        "endTime": "0530",
+        "artist": "CRIME FAMILY B2B BLVCKJESUS B2B WSHNGTN"
+      }
+    ]
+  },
+  "quantumvalley": {
+    "23": [
+      {
+        "startTime": "1900",
+        "endTime": "2030",
+        "artist": "TRICE"
+      },
+      {
+        "startTime": "2031",
+        "endTime": "2130",
+        "artist": "ALESSANDRA RONCONE"
+      },
+      {
+        "startTime": "2131",
+        "endTime": "2230",
+        "artist": "AHMED ROMEL"
+      },
+      {
+        "startTime": "2231",
+        "endTime": "2330",
+        "artist": "GRUM"
+      },
+      {
+        "startTime": "2331",
+        "endTime": "2359",
+        "artist": "BT"
+      }
+    ],
+    "24": [
+      {
+        "startTime": "0000",
+        "endTime": "0030",
+        "artist": "BT"
+      },
+      {
+        "startTime": "0031",
+        "endTime": "0130",
+        "artist": "VINI VICI"
+      },
+      {
+        "startTime": "0131",
+        "endTime": "0230",
+        "artist": "ILAN BLUESTONE"
+      },
+      {
+        "startTime": "0231",
+        "endTime": "0330",
+        "artist": "FERRY CORSTEN"
+      },
+      {
+        "startTime": "0331",
+        "endTime": "0430",
+        "artist": "ABRAXIS"
+      },
+      {
+        "startTime": "0431",
+        "endTime": "0530",
+        "artist": "GANESH"
+      },
+      {
+        "startTime": "1900",
+        "endTime": "2000",
+        "artist": "MR BROOKS"
+      },
+      {
+        "startTime": "2001",
+        "endTime": "2100",
+        "artist": "JAYTECG"
+      },
+      {
+        "startTime": "2101",
+        "endTime": "2200",
+        "artist": "JEROME ISMA-AE "
+      },
+      {
+        "startTime": "2201",
+        "endTime": "2300",
+        "artist": "ANDREW BAYER"
+      },
+      {
+        "startTime": "2301",
+        "endTime": "2359",
+        "artist": "ALPHA 9"
+      }
+    ],
+    "25":[
+      {
+        "startTime": "0000",
+        "endTime": "0100",
+        "artist": "AUDIEN"
+      },
+      {
+        "startTime": "0101",
+        "endTime": "0200",
+        "artist": "COSMIC GATE"
+      },
+      {
+        "startTime": "0201",
+        "endTime": "0330",
+        "artist": "ALY & FILA"
+      },
+      {
+        "startTime": "0331",
+        "endTime": "0430",
+        "artist": "INFECTED MUSHROOM"
+      },
+      {
+        "startTime": "0431",
+        "endTime": "0530",
+        "artist": "JORZA"
+      }
+    ]
+  },
+  "stereobloom": {
+    "23": [
+      {
+        "startTime": "1900",
+        "endTime": "2030",
+        "artist": "BELLECOUR"
+      },
+      {
+        "startTime": "2031",
+        "endTime": "2145",
+        "artist": "BLOSSOM"
+      },
+      {
+        "startTime": "2146",
+        "endTime": "2300",
+        "artist": "DEVAULT"
+      },
+      {
+        "startTime": "2301",
+        "endTime": "2359",
+        "artist": "MATRODA"
+      }
+    ],
+    "24": [
+      {
+        "startTime": "0000",
+        "endTime": "0030",
+        "artist": "MATRODA"
+      },
+      {
+        "startTime": "0031",
+        "endTime": "0130",
+        "artist": "DR. FRESCH"
+      },
+      {
+        "startTime": "0131",
+        "endTime": "0245",
+        "artist": "BIJOU"
+      },
+      {
+        "startTime": "0246",
+        "endTime": "0400",
+        "artist": "DUSTYCLOUD"
+      },
+      {
+        "startTime": "0401",
+        "endTime": "0530",
+        "artist": "TONY ROMERA"
+      },
+      {
+        "startTime": "1900",
+        "endTime": "2030",
+        "artist": "CASMALIA"
+      },
+      {
+        "startTime": "2031",
+        "endTime": "2145",
+        "artist": "BLACK V NECK"
+      },
+      {
+        "startTime": "2146",
+        "endTime": "2300",
+        "artist": "WESTEND"
+      },
+      {
+        "startTime": "2301",
+        "endTime": "2359",
+        "artist": "JOHN SUMMIT"
+      }
+    ],
+    "25":[
+      {
+        "startTime": "0000",
+        "endTime": "0015",
+        "artist": "JOHN SUMMIT"
+      },
+      {
+        "startTime": "0016",
+        "endTime": "0130",
+        "artist": "LEE FOSS"
+      },
+      {
+        "startTime": "0131",
+        "endTime": "0300",
+        "artist": "?? B2B ??"
+      },
+      {
+        "startTime": "0301",
+        "endTime": "0415",
+        "artist": "QRION"
+      },
+      {
+        "startTime": "0416",
+        "endTime": "0530",
+        "artist": "CUT SNAKE"
+      },
+      {
+        "startTime": "0431",
+        "endTime": "0530",
+        "artist": "MODESTEP"
+      }
+    ]
   }
 }
