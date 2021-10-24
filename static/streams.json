@@ -4,7 +4,7 @@
     "displayName": "Curated Livestream",
     "streams": [
       "https://www.youtube.com/embed/2i54dkv0j0M?&autoplay=1",
-      "https://player.twitch.tv/?channel=insomniac&parent=localhost"
+      "https://player.twitch.tv/?channel=insomniac&parent=zsoulweaver.github.io"
     ],
     "thumbnail": "https://i.ytimg.com/vi/2i54dkv0j0M/hqdefault_live.jpg"
   },
