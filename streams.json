@@ -14,48 +14,60 @@
     "streams": [
       "https://www.youtube.com/embed/jbIgWbhmoiE?&autoplay=1"
     ],
-    "thumbnail": "https://i.ytimg.com/vi/1JXa7iYnyi0/hqdefault_live.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/jbIgWbhmoiE/hqdefault_live.jpg"
   },
   {
     "key": "circuitgrounds",
     "displayName": "circuitGROUNDS",
-    "streams": [],
-    "thumbnail": "https://i.ytimg.com/vi/slYmVzlJuyc/hqdefault_live.jpg"
+    "streams": [
+      "https://www.youtube.com/embed/UlvahMG-VAY?&autoplay=1"
+    ],
+    "thumbnail": "https://i.ytimg.com/vi/UlvahMG-VAY/hqdefault_live.jpg"
   },
   {
     "key": "kineticfield",
     "displayName": "kineticFIELD",
-    "streams": [],
-    "thumbnail": "https://i.ytimg.com/vi/xyzMGR8OFFE/hqdefault_live.jpg"
+    "streams": [
+      "https://www.youtube.com/embed/KIEoXAxjthQ?&autoplay=1"
+    ],
+    "thumbnail": "https://i.ytimg.com/vi/KIEoXAxjthQ/hqdefault_live.jpg"
   },
   {
     "key": "basspod",
     "displayName": "bassPOD",
     "streams": [],
-    "thumbnail": "https://i.ytimg.com/vi/aHFc7ARpDFY/hqdefault_live.jpg"
+    "thumbnail": "https://i.ytimg.com/vi/2i54dkv0j0M/hqdefault_live.jpg"
   },
   {
     "key": "neongarden",
     "displayName": "neonGARDEN",
-    "streams": [],
+    "streams": [
+      "https://www.youtube.com/embed/gyjQ4mnYx-g?&autoplay=1"
+    ],
     "thumbnail": "https://i.ytimg.com/vi/gyjQ4mnYx-g/hqdefault.jpg"
   },
   {
     "key": "wasteland",
     "displayName": "wasteLAND",
-    "streams": [],
+    "streams": [
+      "https://www.youtube.com/embed/7km46x1q11U?&autoplay=1"
+    ],
     "thumbnail": "https://i.ytimg.com/vi/7km46x1q11U/hqdefault.jpg"
   },
   {
     "key": "quantumvalley",
     "displayName": "quantumVALLEY",
-    "streams": [],
+    "streams": [
+      "https://www.youtube.com/embed/6tY027T96QU?&autoplay=1"
+    ],
     "thumbnail": "https://i.ytimg.com/vi/6tY027T96QU/hqdefault.jpg"
   },
   {
     "key": "stereobloom",
     "displayName": "stereoBLOOM",
-    "streams": [],
+    "streams": [
+      "https://www.youtube.com/embed/ZMgyVMnORvw?&autoplay=1"
+    ],
     "thumbnail": "https://i.ytimg.com/vi/ZMgyVMnORvw/hqdefault.jpg"
   }
 ]
