@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/schedule/wasteland", {data:[{}],fetch:{},mutations:void 0});

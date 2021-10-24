@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/schedule/cosmicmeadow", {data:[{}],fetch:{},mutations:void 0});

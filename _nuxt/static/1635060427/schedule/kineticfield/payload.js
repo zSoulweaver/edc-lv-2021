@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/schedule/kineticfield", {data:[{}],fetch:{},mutations:void 0});

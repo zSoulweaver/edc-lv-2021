@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/watch/basspod/0", {data:[{}],fetch:{},mutations:[]});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/watch/kineticfield/0", {data:[{}],fetch:{},mutations:[]});

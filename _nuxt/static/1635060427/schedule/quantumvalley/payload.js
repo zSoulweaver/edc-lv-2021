@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/schedule/quantumvalley", {data:[{}],fetch:{},mutations:void 0});

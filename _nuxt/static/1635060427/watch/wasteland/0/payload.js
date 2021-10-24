@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/watch/wasteland/0", {data:[{}],fetch:{},mutations:void 0});
