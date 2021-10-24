@@ -43,17 +43,21 @@
 <script>
 import { defineComponent, onBeforeUnmount, onMounted, reactive } from '@nuxtjs/composition-api'
 import { utcToZonedTime } from 'date-fns-tz'
-import { format } from 'date-fns'
+import { parse, isWithinInterval } from 'date-fns'
 import streams from '~/static/streams.json'
 import schedule from '~/static/schedule.json'
 
 export default defineComponent({
   setup () {
     const scheduleTimes = reactive({
-      cm: null,
-      cg: null,
-      kf: null,
-      bp: null
+      cosmicmeadow: null,
+      circuitgrounds: null,
+      kineticfield: null,
+      basspod: null,
+      neongarden: null,
+      wasteland: null,
+      quantumvalley: null,
+      stereobloom: null
     })
 
     let refreshInterval
@@ -78,25 +82,21 @@ export default defineComponent({
 
     function getCurrentScheduleForStage (stage) {
       const date = utcToZonedTime(Date.now(), 'America/Los_Angeles')
-      const formattedTime = format(date, 'HHmm')
-      const hour = formattedTime.substring(0, 2)
-      const minute = formattedTime.substring(2, 4)
 
-      const events = schedule[stage][date.getDate()]
-      if (events === undefined || !events[date.getDate()]) {
+      const events = schedule[stage]
+      if (events === undefined || events[date.getDate()] === undefined) {
         return
       }
-      return events.find((event) => {
-        if (hour === event.startTime.substring(0, 2)) {
-          if (parseInt(minute) > parseInt(event.startTime.substring(2, 4))) {
-            return event
-          }
-        }
 
-        if (hour === event.endTime.substring(0, 2)) {
-          if (parseInt(minute) < parseInt(event.endTime.substring(2, 4))) {
-            return event
-          }
+      return events[date.getDate()].find((event) => {
+        const parsedStartTime = parse(`${event.startTime} ${date.getDate()} 10 -0700`, 'HHmm dd LL XXXX', new Date())
+        const parsedEndTime = parse(`${event.endTime} ${date.getDate()} 10 -0700`, 'HHmm dd LL XXXX', new Date())
+
+        if (isWithinInterval(Date.now(), {
+          start: parsedStartTime,
+          end: parsedEndTime
+        })) {
+          return event
         }
 
         return null

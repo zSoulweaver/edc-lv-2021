@@ -21,10 +21,10 @@
 </template>
 
 <script>
-import { computed, defineComponent, useRoute, onMounted, onBeforeUnmount, ref } from '@nuxtjs/composition-api'
+import { computed, defineComponent, useRoute, onMounted, onBeforeUnmount, ref, watch } from '@nuxtjs/composition-api'
 import ArrowLeft from 'vue-material-design-icons/ArrowLeft.vue'
 import { utcToZonedTime } from 'date-fns-tz'
-import { format } from 'date-fns'
+import { parse, isWithinInterval } from 'date-fns'
 import schedule from '~/static/schedule.json'
 
 export default defineComponent({
@@ -35,9 +35,9 @@ export default defineComponent({
   setup () {
     const route = useRoute()
 
-    const streamKey = route.value.params.key
+    const streamKey = computed(() => route.value.params.key)
     const isHome = computed(() => route.value.name === 'index')
-    const isStream = computed(() => route.value.name === 'watch-key')
+    const isStream = computed(() => route.value.name === 'watch-key-streamIndex')
 
     const currentlyPlaying = ref(null)
 
@@ -52,6 +52,12 @@ export default defineComponent({
       clearInterval(refreshInterval)
     })
 
+    watch(() => streamKey.value, (newKey) => {
+      if (newKey) {
+        getCurrentlyPlaying()
+      }
+    })
+
     function getCurrentlyPlaying () {
       if (isStream.value) {
         currentlyPlaying.value = getCurrentScheduleForStage(streamKey.value)
@@ -60,25 +66,20 @@ export default defineComponent({
 
     function getCurrentScheduleForStage (stage) {
       const date = utcToZonedTime(Date.now(), 'America/Los_Angeles')
-      const formattedTime = format(date, 'HHmm')
-      const hour = formattedTime.substring(0, 2)
-      const minute = formattedTime.substring(2, 4)
-
       const events = schedule[stage]
-      if (events === undefined || !events[date.getDate()]) {
+      if (events === undefined || events[date.getDate()] === undefined) {
         return
       }
-      return events[date.getDate()].find((event) => {
-        if (hour === event.startTime.substring(0, 2)) {
-          if (parseInt(minute) > parseInt(event.startTime.substring(2, 4))) {
-            return event
-          }
-        }
 
-        if (hour === event.endTime.substring(0, 2)) {
-          if (parseInt(minute) < parseInt(event.endTime.substring(2, 4))) {
-            return event
-          }
+      return events[date.getDate()].find((event) => {
+        const parsedStartTime = parse(`${event.startTime} ${date.getDate()} 10 -0700`, 'HHmm dd LL XXXX', new Date())
+        const parsedEndTime = parse(`${event.endTime} ${date.getDate()} 10 -0700`, 'HHmm dd LL XXXX', new Date())
+
+        if (isWithinInterval(Date.now(), {
+          start: parsedStartTime,
+          end: parsedEndTime
+        })) {
+          return event
         }
 
         return null
